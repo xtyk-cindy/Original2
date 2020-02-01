@@ -9,12 +9,14 @@
 import UIKit
 import RealmSwift
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var table: UITableView!
     
     var itemList: Results<TodoModel>!
+    var item: TodoModel!
 
 
     override func viewDidLoad() {
@@ -56,7 +58,7 @@ extension ViewController: UITableViewDataSource {
         
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
         
-        let item: TodoModel = self.itemList[(indexPath as NSIndexPath).row];
+       item = self.itemList[(indexPath as NSIndexPath).row];
         
         cell.textLabel?.text = item.mochimonoteiji
         
@@ -71,8 +73,12 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            itemList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+//            if let item = item?[indexPath.row] {
+//                try! realm.write {
+//                    realm.delegate(item)
+//                }
+//                tableView.deleteRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
+//            }
             
             
         }
