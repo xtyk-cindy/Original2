@@ -82,14 +82,24 @@
                     <view key="view" contentMode="scaleToFill" id="iEk-wP-QfP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyj-G3-B1o">
+                                <rect key="frame" x="250" y="36" width="144" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-YZ-ved">
+                                <rect key="frame" x="75" y="323" width="265" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59855780676015558" green="0.96456039507772018" blue="0.75903689811809427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="owT-fq-Z2T"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Hs-US-0gp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3k-Xt-V0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-494" y="117"/>
+            <point key="canvasLocation" x="-494.20289855072468" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>
