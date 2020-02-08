@@ -82,8 +82,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
           return cell
       }
     
-    private func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-          
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
           if (editingStyle == UITableViewCell.EditingStyle.delete) {
               do{
                   let realm = try Realm()
@@ -92,11 +96,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
                   }
                   table.deleteRows(at: [(indexPath as IndexPath)], with: UITableView.RowAnimation.fade)
               }catch{
-                
+
               }
             self.table.reloadData()
           }
     }
+    
 }
     
 
